@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Epilogue:wght@500;700&display=swap');
+
+// VARIABLES
+
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+$fontSizeParagraph: 18px;
+$fontSizeNavLinks: 14px;
+$fontSizeLogo: 2rem;
+
+@mixin dropdownMenu{
+    background: #fff;
+    display: block;
+    line-height: 2;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+}
+
+
+*{
+    box-sizing: border-box;
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Epilogue', sans-serif;
+        background: $almostWhite;
+    }
+}
+
+nav{
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+    .items{
+       display: flex;
+       flex-direction: row;
+       gap: 30px;
+       .logo{
+        text-decoration: none;
+        color: $almostBlack;
+        font-weight: 700;
+        font-size: $fontSizeLogo;
+        padding: 10px;
+       }
+       ul{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding: 5px;
+        .active{
+            .drop-icon{
+                transform: rotate(180deg);
+            }
+        }
+        .bold{
+            color: red;
+        }
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                padding: 12px;
+                color: $almostBlack;
+                font-weight: 500;
+                font-size: $fontSizeNavLinks;
+                cursor: pointer;
+            }
+            &:hover{
+                font-weight: 700;
+            }
+        }
+            .dropdown1{
+                @include dropdownMenu;
+                display: none;
+                margin-top: 10px;    
+        }
+       }
+    }
+    .dropdown1-active{
+        display: block;
+    }
+    a:hover{
+        font-weight: 700;
+    }
+    .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 12px;
+        font-size: $fontSizeNavLinks;
+        a{
+            text-decoration: none;
+            color: $almostBlack;
+            padding: 10px;
+        }
+        button{
+            background: transparent;
+            border: 2px solid $mediumGray;
+            border-radius: 10px;
+            width: 100px;
+            height: 40px;
+            padding: 10px;
+        }
+        button:hover{
+            font-weight: 700;
+        }
+    }
+}
+
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    justify-content: space-between;
+    .text-info-div{
+        h1{
+            font-size: 5.5rem;
+            padding-top: 60px;
+            line-height: .8;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        p{
+            font-size: $fontSizeParagraph;
+            font: 500;
+            line-height: .4;
+            opacity: 0.7;
+        }
+        button{
+            margin-top: 30px;
+            background: $almostBlack;
+            color: $almostWhite;
+            border: 2px solid $mediumGray;
+            border-radius: 10px;
+            width: 150px;
+            padding: 15px;
+            font-size: $fontSizeParagraph;
+        }
+        button:hover{
+            background: transparent;
+            font-weight: 700;
+            color: $almostBlack;
+        }
+        .partners{
+           margin-top: 80px;
+           img{
+            padding: 10px;
+           }
+        }
+    }
+    .hero-image-div{
+        width: 50%;
+        margin-top: 30px;
+        img{
+          width: 70%;  
+          margin-left: 100px;
+        }
+    }
+}
+
+
+
+// media queries
+
+@media (max-width: 320px) {
+   main{
+    background-color: green;
+    width: 100%;
+    flex-direction: column;
+    
+   }
+    .hero-image-div{
+        background-image: url(../intro-section-with-dropdown-navigation-main/images/image-hero-mobile.png);
+        background-repeat: no-repeat; 
+        margin-top: 30px;
+        background-color: red;
+        img{
+           display: none; 
+        }
+        
+    }
+   
+}

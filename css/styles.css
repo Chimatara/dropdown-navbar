@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Epilogue:wght@500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Epilogue", sans-serif;
+  background: hsl(0, 0%, 98%);
+}
+
+nav {
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 95%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  margin-top: 10px;
+}
+nav .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+nav .items .logo {
+  text-decoration: none;
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 10px;
+}
+nav .items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  padding: 5px;
+}
+nav .items ul .active .drop-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+nav .items ul li {
+  list-style-type: none;
+}
+nav .items ul li a {
+  text-decoration: none;
+  padding: 12px;
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+nav .items ul li a:hover {
+  font-weight: 700;
+}
+nav .items ul .dropdown1 {
+  background: #fff;
+  display: block;
+  line-height: 2;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  display: none;
+  margin-top: 10px;
+}
+nav a:hover {
+  font-weight: 700;
+}
+nav .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  padding: 12px;
+  font-size: 14px;
+}
+nav .info a {
+  text-decoration: none;
+  color: hsl(0, 0%, 8%);
+  padding: 10px;
+}
+nav .info button {
+  background: transparent;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+}
+nav .info button:hover {
+  font-weight: 700;
+}
+
+main {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .text-info-div h1 {
+  font-size: 5.5rem;
+  padding-top: 60px;
+  line-height: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .text-info-div p {
+  font-size: 18px;
+  font: 500;
+  line-height: 0.4;
+  opacity: 0.7;
+}
+main .text-info-div button {
+  margin-top: 30px;
+  background: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 10px;
+  width: 150px;
+  padding: 15px;
+  font-size: 18px;
+}
+main .text-info-div button:hover {
+  background: transparent;
+  font-weight: 700;
+  color: hsl(0, 0%, 8%);
+}
+main .text-info-div .partners {
+  margin-top: 80px;
+}
+main .text-info-div .partners img {
+  padding: 10px;
+}
+main .hero-image-div {
+  width: 50%;
+  margin-top: 30px;
+}
+main .hero-image-div img {
+  width: 70%;
+  margin-left: 100px;
+}
+
+@media (max-width: 320px) {
+  main {
+    background-color: green;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-image-div {
+    background-image: url(../intro-section-with-dropdown-navigation-main/images/image-hero-mobile.png);
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    background-color: red;
+  }
+  .hero-image-div img {
+    display: none;
+  }
+}
